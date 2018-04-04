@@ -1,0 +1,129 @@
+﻿@model IEnumerable<Model.sm_Persona>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.primerNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.segundoNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.primerApellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.segundoApellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idTipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idCiudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.celular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefonoFijo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.createdDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.createdBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sm_Paciente.segmento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sm_Paciente1.segmento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sm_PacientePrograma.observaciones)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.primerNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.segundoNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.primerApellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.segundoApellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idTipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idCiudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.celular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefonoFijo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createdDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createdBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sm_Paciente.segmento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sm_Paciente1.segmento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sm_PacientePrograma.observaciones)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

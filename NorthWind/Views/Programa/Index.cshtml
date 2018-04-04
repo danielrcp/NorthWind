@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Model.sm_Programa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.Action("Total")
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.createdDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.createdBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaFin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.orden)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idRiesgoPrograma)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sm_Estado.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sm_Poblacion.descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createdDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createdBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaFin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.orden)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idRiesgoPrograma)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sm_Estado.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sm_Poblacion.descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idPrograma }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idPrograma }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idPrograma })
+        </td>
+    </tr>
+}
+
+</table>
